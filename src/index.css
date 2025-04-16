@@ -29,6 +29,10 @@
     @apply h-full w-full;
 }
 
+#hero2:hover img {
+    scale: 1.1;
+}
+
 @media (max-width: 576px) {
 
     .swiper-button-prev,

@@ -9,12 +9,12 @@ function Header() {
     }
 
     return (<>
-        <header className='flex border-b border-gray-300 py-3 px-4 sm:px-10 bg-white min-h-[65px] tracking-wide relative z-50'>
+        <header className='flex border-b border-gray-300 py-3 px-4 sm:px-10 bg-white min-h-[65px] tracking-wide relative z-50 sticky top-0'>
             <div className='flex flex-wrap items-center gap-4 max-w-screen-xl mx-auto w-full'>
                 <a href="/" className="max-sm:hidden">
                     <img src="src/assets/images/logo.png" alt="logo" className='w-[134px]' />
                 </a>
-                <a href="/" className="hidden max-sm:block">
+                <a href="/" className="hidden max-sm:block m-auto">
                     <img src="src/assets/images/logo.png" alt="logo" className='w-[134px]' />
                 </a>
 
@@ -67,9 +67,9 @@ function Header() {
                     </ul>
                 </div>
 
-                <div className='flex gap-4 ml-auto'>
+                <div className='flex gap-4 ml-auto w-full sm:w-auto'>
                     <div
-                        className='flex max-w-xs w-full bg-gray-100 px-4 py-2.5 outline outline-transparent border focus-within:border-slate-900 focus-within:bg-transparent transition-all'>
+                        className='flex sm:max-w-xs w-full bg-gray-100 px-4 py-2.5 outline outline-transparent border focus-within:border-slate-900 focus-within:bg-transparent transition-all'>
                         <input type='text' placeholder='Search something...'
                             className='w-full text-sm bg-transparent outline-none pr-2' />
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"

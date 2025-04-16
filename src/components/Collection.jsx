@@ -1,4 +1,4 @@
-import { Navigation, FreeMode } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CollectionCard from "./cards/CollectionCard"
 
@@ -19,9 +19,8 @@ function Collection() {
             spaceBetween={20}
             slidesPerView={1.2}
             className='mt-2'
-            modules={[Navigation, FreeMode]}
+            modules={[Navigation]}
             navigation
-            freeMode
         >
             <SwiperSlide>
                 <CollectionCard />
