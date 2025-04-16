@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+.CollectionCard {
+    @apply flex flex-col text-center;
+}
+
+.CollectionCard:hover img {
+    scale: 1.1;
+}
+
+.CollectionCardImage {
+    @apply transition-transform duration-500 ease-out w-full h-full;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #000;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 1000px;
+}
+
+.DimensionsFull {
+    @apply h-full w-full;
+}
+
+@media (max-width: 576px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+}
