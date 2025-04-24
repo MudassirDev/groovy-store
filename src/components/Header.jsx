@@ -9,7 +9,7 @@ function Header() {
     }
 
     return (<>
-        <header className='flex border-b border-gray-300 py-3 px-4 sm:px-10 bg-white min-h-[65px] tracking-wide relative z-50 sticky top-0'>
+        <header className='flex border-b border-gray-300 py-3 px-4 sm:px-10 bg-white min-h-[65px] tracking-wide z-50 sticky top-0'>
             <div className='flex flex-wrap items-center gap-4 max-w-screen-xl mx-auto w-full'>
                 <a href="/" className="max-sm:hidden">
                     <img src="src/assets/images/logo.png" alt="logo" className='w-[134px]' />
