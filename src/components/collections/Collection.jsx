@@ -1,9 +1,9 @@
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import CollectionCard from "./cards/CollectionCard"
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import CollectionCard from './CollectionCard';
 
 function Collection() {
     return (<>
