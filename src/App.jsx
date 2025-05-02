@@ -1,28 +1,45 @@
 import { Fade } from "react-awesome-reveal"
-import { BrowserRouter } from "react-router"
+import { BrowserRouter, Route, Routes, useLocation } from "react-router"
 import Header from "./components/layout/Header"
 import Home from "./components/pages/Home"
 import Footer from "./components/layout/Footer"
+import NotFound from "./components/pages/NotFound"
+import Collections from "./components/pages/Collections"
 
-function App() {
+function Layout({ children }) {
+    const location = useLocation()
+
+    const isHome = location.pathname === "/"
 
     return (
         <>
-            <BrowserRouter>
+            <div className="min-h-screen flex flex-col">
                 <Header />
                 <div className="mt-[30px]"></div>
-                <div id="main" className="max-w-[90%] m-auto">
-                    <Home />
-                </div>
-                <Fade>
-                    <img className="max-lg:hidden" src="/images/communitybanner.svg" />
-                    <img className="max-lg:hidden" src="/images/instabanner.svg" />
-                </Fade>
+                {isHome ? (children) : (
+                    <div id="main" className="max-w-[90%] m-auto">
+                        {children}
+                    </div>
+                )}
                 <Fade>
                     <Footer />
                 </Fade>
-            </BrowserRouter>
+            </div>
         </>
+    )
+}
+
+function App() {
+    return (
+        <BrowserRouter>
+            <Layout>
+                <Routes>
+                    <Route index element={<Home />} />
+                    <Route path="/collections" element={<Collections />} />
+                    <Route path="/*" element={<NotFound />} />
+                </Routes>
+            </Layout>
+        </BrowserRouter>
     )
 }
 

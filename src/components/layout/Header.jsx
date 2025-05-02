@@ -10,9 +10,9 @@ function Header() {
                     <input type="checkbox" id="check" />
 
                     <span className="menu flex [&>li]:pl-8 [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out [&>li>a]:font-medium [&>li>a]:text-lg">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/collections">Collections</a></li>
+                        <li><a href="/projects">Projects</a></li>
                         <li><a href="#">Resources</a></li>
                         <li><a href="#">Contact</a></li>
 

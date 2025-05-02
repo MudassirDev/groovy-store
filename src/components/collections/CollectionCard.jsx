@@ -1,10 +1,10 @@
-function CollectionCard() {
+function CollectionCard({ collection }) {
     return (<>
-        <a href="/" className="CollectionCard">
+        <a href={collection.url} className="CollectionCard">
             <div className="rounded-[10px] overflow-hidden">
-                <img className="CollectionCardImage" src="/images/demo-product.svg" />
+                <img className="CollectionCardImage" src={collection.image} />
             </div>
-            <p>Graphic T-shirts</p>
+            <p>{collection.name}</p>
         </a>
     </>)
 }
