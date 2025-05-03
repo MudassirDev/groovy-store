@@ -5,6 +5,8 @@ import Home from "./components/pages/Home"
 import Footer from "./components/layout/Footer"
 import NotFound from "./components/pages/NotFound"
 import Collections from "./components/pages/Collections"
+import CollectionPage from "./components/pages/CollectionPage"
+import ProductPage from "./components/pages/ProductPage"
 
 function Layout({ children }) {
     const location = useLocation()
@@ -36,6 +38,8 @@ function App() {
                 <Routes>
                     <Route index element={<Home />} />
                     <Route path="/collections" element={<Collections />} />
+                    <Route path="/collections/:collection" element={<CollectionPage />} />
+                    <Route path="/products/:productname" element={<ProductPage />} />
                     <Route path="/*" element={<NotFound />} />
                 </Routes>
             </Layout>

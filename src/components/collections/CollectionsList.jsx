@@ -8,27 +8,27 @@ import CollectionCard from './CollectionCard';
 const collections = [
     {
         name: "The Vintage Drop V",
-        url: "/",
+        url: "/collections/test",
         image: "/images/VINTAGE_DROP_BANNER.svg"
     },
     {
         name: "The Vintage Drop V",
-        url: "/",
+        url: "/collections/test",
         image: "/images/VINTAGE_DROP_BANNER.svg"
     },
     {
         name: "The Vintage Drop V",
-        url: "/",
+        url: "/collections/test",
         image: "/images/VINTAGE_DROP_BANNER.svg"
     },
     {
         name: "The Vintage Drop V",
-        url: "/",
+        url: "/collections/test",
         image: "/images/VINTAGE_DROP_BANNER.svg"
     },
     {
         name: "The Vintage Drop V",
-        url: "/",
+        url: "/collections/test",
         image: "/images/VINTAGE_DROP_BANNER.svg"
     },
 ]

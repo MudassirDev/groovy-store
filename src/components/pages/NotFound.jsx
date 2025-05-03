@@ -9,7 +9,6 @@ function NotFound() {
                 <a href="/">Go Home</a>
             </button>
         </main>
-        <div className="mt-[30px]"></div>
     </>)
 }
 

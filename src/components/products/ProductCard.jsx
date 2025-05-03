@@ -2,7 +2,7 @@ import Stars from "../ui/Stars"
 
 function ProductCard() {
     return (<>
-        <div className="flex flex-col">
+        <a href="/products/test" className="flex flex-col">
             <div className="rounded-lg w-full h-full relative overflow-hidden shadow-lg group cursor-pointer">
                 <img
                     src="/images/pant.jpg"
@@ -21,7 +21,7 @@ function ProductCard() {
                     <p>7 reviews</p>
                 </div>
             </div>
-        </div>
+        </a>
     </>)
 }
 
