@@ -7,6 +7,9 @@ import NotFound from "./components/pages/NotFound"
 import Collections from "./components/pages/Collections"
 import CollectionPage from "./components/pages/CollectionPage"
 import ProductPage from "./components/pages/ProductPage"
+import { useState } from "react"
+import { CartContext } from "./contexts/CartContext"
+import Cart from "./data/Cart"
 
 function Layout({ children }) {
     const location = useLocation()
@@ -32,18 +35,22 @@ function Layout({ children }) {
 }
 
 function App() {
+    const [cart, setCart] = useState(new Cart());
+
     return (
-        <BrowserRouter>
-            <Layout>
-                <Routes>
-                    <Route index element={<Home />} />
-                    <Route path="/collections" element={<Collections />} />
-                    <Route path="/collections/:collection" element={<CollectionPage />} />
-                    <Route path="/products/:productname" element={<ProductPage />} />
-                    <Route path="/*" element={<NotFound />} />
-                </Routes>
-            </Layout>
-        </BrowserRouter>
+        <CartContext.Provider value={{ cart, setCart }}>
+            <BrowserRouter>
+                <Layout>
+                    <Routes>
+                        <Route index element={<Home />} />
+                        <Route path="/collections" element={<Collections />} />
+                        <Route path="/collections/:collection" element={<CollectionPage />} />
+                        <Route path="/products/:productHandle" element={<ProductPage />} />
+                        <Route path="/*" element={<NotFound />} />
+                    </Routes>
+                </Layout>
+            </BrowserRouter>
+        </CartContext.Provider>
     )
 }
 
