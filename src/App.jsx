@@ -35,7 +35,16 @@ function Layout({ children }) {
 }
 
 function App() {
-    const [cart, setCart] = useState(new Cart());
+    const [cart, setCart] = useState(() => {
+        const localCart = localStorage.getItem("cart");
+        if (localCart) {
+            const cart = new Cart();
+            cart.setCart(JSON.parse(localCart));
+            return cart;
+        } else {
+            return new Cart();
+        }
+    });
 
     return (
         <CartContext.Provider value={{ cart, setCart }}>

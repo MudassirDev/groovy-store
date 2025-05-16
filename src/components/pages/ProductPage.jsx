@@ -19,8 +19,6 @@ function ProductPage() {
         const updatedCart = new Cart();
         updatedCart.setCart(cart.getCart());
         updatedCart.addItem(productHandle, variantRef.current.value, parseInt(qty));
-        console.log(updatedCart);
-        console.log(updatedCart.getCartTotal());
         setCart(updatedCart);
     }
 

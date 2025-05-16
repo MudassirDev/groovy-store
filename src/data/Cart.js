@@ -13,10 +13,12 @@ class Cart {
         } else {
             this.items.push({ productId, variantId, qty });
         }
+        this.setLocal();
     }
 
     removeItem(productId, variantId) {
         this.items = this.items.filter(i => !(i.productId === productId && i.variantId === variantId));
+        this.setLocal();
     }
 
     updateItem(productId, variantId, qty) {
@@ -28,6 +30,11 @@ class Cart {
                 item.qty = qty;
             }
         }
+        this.setLocal();
+    }
+
+    setLocal() {
+        localStorage.setItem("cart", JSON.stringify(this.getCart()));
     }
 
     getCartTotal() {
