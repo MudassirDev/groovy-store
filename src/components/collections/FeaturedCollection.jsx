@@ -8,42 +8,42 @@ import CollectionCard from './CollectionCard';
 const collections = [
     {
         name: "Graphic T-shirts",
-        url: "/",
+        url: "/collections/test",
         image: "/images/demo-product.svg"
     },
     {
         name: "Graphic T-shirts",
-        url: "/",
+        url: "/collections/test",
         image: "/images/demo-product.svg"
     },
     {
         name: "Graphic T-shirts",
-        url: "/",
+        url: "/collections/test",
         image: "/images/demo-product.svg"
     },
     {
         name: "Graphic T-shirts",
-        url: "/",
+        url: "/collections/test",
         image: "/images/demo-product.svg"
     },
     {
         name: "Graphic T-shirts",
-        url: "/",
+        url: "/collections/test",
         image: "/images/demo-product.svg"
     },
     {
         name: "Graphic T-shirts",
-        url: "/",
+        url: "/collections/test",
         image: "/images/demo-product.svg"
     },
     {
         name: "Graphic T-shirts",
-        url: "/",
+        url: "/collections/test",
         image: "/images/demo-product.svg"
     },
     {
         name: "Graphic T-shirts",
-        url: "/",
+        url: "/collections/test",
         image: "/images/demo-product.svg"
     },
 ]

@@ -7,7 +7,9 @@ export const Products = {
         images: [
             "/images/demo-product.svg",
             "/images/f1.jpg",
-            "/images/f2.jpg"
+            "/images/f2.jpg",
+            "/images/f2.jpg",
+            "/images/f2.jpg",
         ],
         variants: [
             {

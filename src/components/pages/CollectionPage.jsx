@@ -39,6 +39,7 @@ function CollectionPage() {
                 </ul>
             </div>
             <CollectionGrid />
+            <div className="mt-[30px]"></div>
         </div>
     )
 }

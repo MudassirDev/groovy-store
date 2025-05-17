@@ -10,6 +10,7 @@ import ProductPage from "./components/pages/ProductPage"
 import { useState } from "react"
 import { CartContext } from "./contexts/CartContext"
 import Cart from "./data/Cart"
+import CartPage from "./components/pages/CartPage"
 
 function Layout({ children }) {
     const location = useLocation()
@@ -22,10 +23,11 @@ function Layout({ children }) {
                 <Header />
                 <div className="mt-[30px]"></div>
                 {isHome ? (children) : (
-                    <div id="main" className="max-w-[90%] m-auto">
+                    <div id="main" className="max-w-[90%] mx-[5%]">
                         {children}
                     </div>
                 )}
+                <div className="flex-1"></div>
                 <Fade>
                     <Footer />
                 </Fade>
@@ -55,6 +57,7 @@ function App() {
                         <Route path="/collections" element={<Collections />} />
                         <Route path="/collections/:collection" element={<CollectionPage />} />
                         <Route path="/products/:productHandle" element={<ProductPage />} />
+                        <Route path="/cart" element={<CartPage />} />
                         <Route path="/*" element={<NotFound />} />
                     </Routes>
                 </Layout>
